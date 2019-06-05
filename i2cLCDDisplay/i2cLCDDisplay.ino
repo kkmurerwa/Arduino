@@ -26,8 +26,7 @@ void setup(){
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH);
   lcd.clear();
-//  lcd.print("List of names");//Set output < 16 characters
-//  delay(2000);
+  lcd.print("List of names");//Set output < 16 characters
   pinMode(buttonPin1, INPUT);
   pinMode(buttonPin3, INPUT);
   lcd.setCursor(0,0);

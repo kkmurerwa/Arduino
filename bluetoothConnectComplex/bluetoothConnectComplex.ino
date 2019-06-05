@@ -1,7 +1,7 @@
 //Declare the constants to be used in the project
-const int ledBulbOne = 8;
-const int ledBulbtwo = 9;
-const int ledBulbthree = 10;
+const int ledBulbOne = 13;
+const int ledBulbtwo = 14;
+const int ledBulbthree = 15;
 
 //Initialize the state of the bulbs as OFF
 int state = '0';

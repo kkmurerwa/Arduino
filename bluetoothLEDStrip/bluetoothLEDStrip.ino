@@ -1,5 +1,5 @@
 #include <string.h>
-const int red = 8;
+const int red = 13;
 const int blue = 9;
 const int green = 10;   // how bright the LED is
 String state = "0";
@@ -21,8 +21,12 @@ void loop() { // Reads the data from the serial port and changes value of the st
   while(Serial.available() > 0){
     String received = Serial.readStringUntil(':');
     if (counter == 0){
-      analogWrite(red, received.toInt()/1.4);
-//      Serial.println("red");
+      if (received.toInt() >= 50){
+        digitalWrite(red, HIGH);
+      }
+      else {
+        digitalWrite(red, LOW);
+      }
     }
     else if(counter == 1){
       analogWrite(green, received.toInt()/1.4);

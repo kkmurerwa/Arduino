@@ -1,4 +1,4 @@
-int led = 6;           // the pin that the LED is attached to
+int led = 19;           // the pin that the LED is attached to
 int brightness = 255;    // how bright the LED is
 String state = "0";
 int atoi(const char *string);
