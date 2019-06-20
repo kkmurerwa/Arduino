@@ -16,7 +16,7 @@
  */
 #include <Stepper.h>
 
-const int buttonPin1 = 2;     // the number of the pushbutton pin
+const int buttonPin1 = 11;     // the number of the pushbutton pin
 const int buttonPin2 = 12;  //Second pushbbutton pin
 const int buttonPin3 = 13;
 const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
@@ -46,6 +46,12 @@ void loop() {
   scrollDown = digitalRead(buttonPin1);
   scrollUp = digitalRead(buttonPin3);
   select = digitalRead(buttonPin2);
+  Serial.print("Up: ");
+  Serial.println(scrollUp);
+  Serial.print("Down: ");
+  Serial.println(scrollDown);
+  Serial.print("Select: ");
+  Serial.println(select);
   if (counter >=1  && counter <=3){
 //    Serial.println(counter);
     if (counter < 3){
